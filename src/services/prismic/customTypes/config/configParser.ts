@@ -18,7 +18,7 @@ export default function configParser({
     navigation: navigationItems.map((item) => ({
       type: item.type,
       slug: item.uid,
-      name: item.data.name,
+      name: item.data.name || item.data.title,
       description: item.data.description || null,
       image: (item.data.image && item.data.image.url) || '',
     })) as Config['navigation'],
