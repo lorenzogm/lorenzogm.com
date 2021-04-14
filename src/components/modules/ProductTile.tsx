@@ -9,10 +9,9 @@ import type { Product } from 'types/product'
 import { Config } from 'types/config'
 import Image from 'components/elements/Image'
 import Link from 'components/elements/Link'
-import theme from 'theme'
 
 const PaperStyled = styled(Paper)`
-  margin-bottom: ${theme.spacing(1)}px;
+  margin-bottom: ${({ theme }) => theme.spacing(1)}px;
 `
 
 type ProductTileProps = {

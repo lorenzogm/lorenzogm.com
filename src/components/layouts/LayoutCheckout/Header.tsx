@@ -7,12 +7,11 @@ import Step from '@material-ui/core/Step'
 import StepLabel from '@material-ui/core/StepLabel'
 import styled from 'styled-components'
 import type { Config } from 'types/config'
-import theme from 'theme'
 import Logo from 'components/modules/Logo'
 import Link from 'components/elements/Link'
 
 const HeaderWrapper = styled.header`
-  background-color: ${theme.palette.grey[500]};
+  background-color: ${({ theme }) => theme.palette.grey[500]};
 `
 
 const StepLabelStyled = styled(StepLabel)`

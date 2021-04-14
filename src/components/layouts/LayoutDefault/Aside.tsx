@@ -12,17 +12,16 @@ import IconButton from '@material-ui/core/IconButton'
 import styled from 'styled-components'
 import Button from '@material-ui/core/Button'
 import CartProducts from 'components/modules/CartProductList'
-import theme from 'theme'
 
 export type CartStatus = 'OPEN' | 'CLOSED'
 
 const DrawerStyled = styled(Drawer)`
   .MuiDrawer-paper {
-    ${theme.breakpoints.down('sm')} {
+    ${({ theme }) => theme.breakpoints.down('sm')} {
       width: 100%;
     }
 
-    ${theme.breakpoints.up('md')} {
+    ${({ theme }) => theme.breakpoints.up('md')} {
       min-width: 400px;
     }
   }
@@ -32,7 +31,7 @@ const Body = styled.aside`
   display: flex;
   min-height: calc(100vh - 245px);
   flex-direction: column;
-  margin-bottom: ${theme.spacing(6)}px;
+  margin-bottom: ${({ theme }) => theme.spacing(6)}px;
 `
 
 type AsideProps = {

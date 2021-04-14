@@ -5,13 +5,12 @@ import IconArrowBack from '@material-ui/icons/ArrowBack'
 import styled from 'styled-components'
 import Container from '@material-ui/core/Container'
 import Link from 'components/elements/Link'
-import theme from 'theme'
 
 const FooterWrapper = styled.footer`
-  background-color: ${theme.palette.background.default};
-  border-top: ${theme.palette.grey[900]} solid 1px;
-  padding-bottom: ${theme.spacing(4)}px;
-  padding-top: ${theme.spacing(2)}px;
+  background-color: ${({ theme }) => theme.palette.background.default};
+  border-top: ${({ theme }) => theme.palette.grey[900]} solid 1px;
+  padding-bottom: ${({ theme }) => theme.spacing(4)}px;
+  padding-top: ${({ theme }) => theme.spacing(2)}px;
 `
 
 export default function Footer(): ReactElement {

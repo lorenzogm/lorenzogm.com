@@ -4,12 +4,11 @@ import Typography from '@material-ui/core/Typography'
 import styled from 'styled-components'
 import type { Config } from 'types/config'
 import Link from 'components/elements/Link'
-import theme from 'theme'
 
 const Category = styled(Typography)`
   &:hover {
     text-decoration: underline;
-    text-underline-offset: ${theme.spacing(1)}px;
+    text-underline-offset: ${({ theme }) => theme.spacing(1)}px;
   }
 `
 
