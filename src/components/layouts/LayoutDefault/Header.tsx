@@ -2,6 +2,7 @@ import { ReactElement, useReducer } from 'react'
 import Grid from '@material-ui/core/Grid'
 import Badge from '@material-ui/core/Badge'
 import Hidden from '@material-ui/core/Hidden'
+import styled from 'styled-components'
 import IconButton from '@material-ui/core/IconButton'
 import LocalMallIcon from '@material-ui/icons/LocalMall'
 import { useShoppingCart } from 'use-shopping-cart'
@@ -13,6 +14,11 @@ import Logo from 'components/modules/Logo'
 import Link from 'components/elements/Link'
 
 const { CONFIG_STORE } = process.env
+
+const HeaderStyled = styled.header`
+  padding-top: ${({ theme }) => `${theme.spacing(1)}px`};
+  padding-bottom: ${({ theme }) => `${theme.spacing(2)}px`};
+`
 
 type HeaderProps = {
   config: Config
@@ -34,7 +40,7 @@ export default function Header({
   }
 
   return (
-    <header>
+    <HeaderStyled>
       <Grid
         container
         direction="row"
@@ -57,18 +63,18 @@ export default function Header({
         <Hidden xsDown>
           <Navigation config={config} />
         </Hidden>
-        <div>
-          <LocaleSwitcher />
-          {CONFIG_STORE === 'ENABLED' && (
+        {CONFIG_STORE === 'ENABLED' && (
+          <div>
+            <LocaleSwitcher />
             <IconButton onClick={openCart}>
               <Badge badgeContent={cartCount} color="primary">
                 <LocalMallIcon />
               </Badge>
             </IconButton>
-          )}
-        </div>
+          </div>
+        )}
       </Grid>
-    </header>
+    </HeaderStyled>
   )
 }
 

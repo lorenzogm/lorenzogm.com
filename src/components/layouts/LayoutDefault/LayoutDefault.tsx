@@ -8,7 +8,7 @@ import type { Config } from 'types/config'
 import Meta from 'components/layouts/Meta'
 import exitPreview from 'services/api/preview/exitPreview'
 import CookieBanner from 'components/modules/CookieBanner'
-import theme from 'theme'
+import { Image } from 'types/image'
 import Aside from './Aside'
 import Header from './Header'
 import Footer from './Footer'
@@ -17,19 +17,31 @@ const ContainerStyled = styled(Container)`
   display: flex;
   min-height: calc(100vh - 88px);
   flex-direction: column;
-  margin-bottom: ${theme.spacing(6)}px;
+  margin-bottom: ${({ theme }) => `${theme.spacing(6)}px`};
+`
+
+const Background = styled.div`
+  background-image: ${({
+    imageBackground,
+  }: {
+    imageBackground: Image | null
+  }) => imageBackground && `url(${imageBackground.url})`};
+  background-size: 100% 300px;
+  background-repeat: no-repeat;
 `
 
 type LayoutDefaultProps = {
   preview: boolean
   config: Config
   children: ReactNode
+  imageBackground: Image | null
 }
 
 export default function LayoutDefault({
   preview,
   config,
   children,
+  imageBackground,
 }: LayoutDefaultProps): ReactElement {
   const router = useRouter()
   const [state, dispatch] = useReducer(reducer, { cartStatus: 'CLOSED' })
@@ -49,7 +61,7 @@ export default function LayoutDefault({
   }
 
   return (
-    <>
+    <Background imageBackground={imageBackground}>
       <Meta />
       {preview && (
         <div>
@@ -59,7 +71,7 @@ export default function LayoutDefault({
 
       <CookieBanner />
 
-      <ContainerStyled>
+      <ContainerStyled maxWidth="md">
         <Header config={config} openCart={openCart} />
         <main>{children}</main>
       </ContainerStyled>
@@ -73,7 +85,7 @@ export default function LayoutDefault({
         openCart={openCart}
         closeCart={closeCart}
       />
-    </>
+    </Background>
   )
 }
 
