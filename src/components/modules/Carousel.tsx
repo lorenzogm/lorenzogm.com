@@ -1,6 +1,6 @@
 import { ReactElement, useRef } from 'react'
 import Glider, { GliderMethods } from 'react-glider'
-import Image from 'components/atoms/Image'
+import Image from 'components/elements/Image'
 import type { SliceCarousel } from 'types/slices'
 
 import 'glider-js/glider.min.css'

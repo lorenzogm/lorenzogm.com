@@ -10,9 +10,9 @@ import CircularProgress from '@material-ui/core/CircularProgress'
 import type { Config } from 'types/config'
 import type { PaymentMethods } from 'types/paymentMethods'
 import LayoutCheckout from 'components/layouts/LayoutCheckout/LayoutCheckout'
-import BoxHeader from 'components/atoms/BoxHeader'
-import CartProductList from 'components/molecules/CartProductList'
-import OrderSummary from 'components/molecules/OrderSummary'
+import BoxHeader from 'components/elements/BoxHeader'
+import CartProductList from 'components/modules/CartProductList'
+import OrderSummary from 'components/modules/OrderSummary'
 import useUserAddress from 'hooks/useUserAddress'
 
 type CheckoutConfirmationTemplateProps = {

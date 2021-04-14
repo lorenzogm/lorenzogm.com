@@ -3,7 +3,7 @@ export type Content = {
   uid: string
   type: 'content'
   data: {
-    name: string
+    title: string
     body: Slice[]
   }
 }

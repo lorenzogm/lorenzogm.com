@@ -5,7 +5,7 @@ import { ReactElement } from 'react'
 
 import PageLayout from 'components/layouts/LayoutDefault/LayoutDefault'
 import type { Config } from 'types/config'
-import BlogPostList from 'components/molecules/BlogPostList'
+import BlogPostList from 'components/modules/BlogPostList'
 import type { BlogPost } from 'types/blogPost'
 
 type BlogTemplateProps = {

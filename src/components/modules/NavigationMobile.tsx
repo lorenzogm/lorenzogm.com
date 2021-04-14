@@ -11,7 +11,7 @@ import Divider from '@material-ui/core/Divider'
 import IconClose from '@material-ui/icons/Close'
 
 import type { Config } from 'types/config'
-import Link from 'components/atoms/Link'
+import Link from 'components/elements/Link'
 import Logo from './Logo'
 
 const DrawerMobile = styled(Drawer)`

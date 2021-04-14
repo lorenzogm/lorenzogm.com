@@ -20,7 +20,8 @@
           "carousel": [],
           "image": [],
           "list_of_products": [],
-          "list_of_blog_posts": []
+          "list_of_blog_posts": [],
+          "teaser": []
         },
         "choices": {
           "list_of_products": {
@@ -70,8 +71,8 @@
           },
           "list_of_blog_posts": {
             "type": "Slice",
-            "fieldset": "List of Blog Posts",
-            "description": "List of Blog Posts",
+            "fieldset": "Blog Posts: Latest",
+            "description": "List with the latest blog posts",
             "icon": "insert_drive_file",
             "display": "list",
             "non-repeat": {
@@ -92,6 +93,30 @@
                 }
               }
             }
+          },
+          "teaser": {
+            "type": "Slice",
+            "fieldset": "Teaser",
+            "description": "Teaser",
+            "icon": "add_to_photos",
+            "display": "list",
+            "non-repeat": {
+              "title": {
+                "type": "Text",
+                "config": {
+                  "label": "Title"
+                }
+              },
+              "image": {
+                "type": "Image",
+                "config": {
+                  "constraint": {},
+                  "thumbnails": [],
+                  "label": "Image"
+                }
+              }
+            },
+            "repeat": {}
           }
         }
       }

@@ -1,7 +1,7 @@
 import Grid from '@material-ui/core/Grid'
 import { ReactElement } from 'react'
 import Typography from '@material-ui/core/Typography'
-import Navigation from 'components/molecules/Navigation'
+import Navigation from 'components/modules/Navigation'
 import type { Config } from 'types/config'
 
 type FooterProps = {

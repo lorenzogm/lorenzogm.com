@@ -1,6 +1,6 @@
 import Grid from '@material-ui/core/Grid'
 import type { ReactElement } from 'react'
-import BlogPostCard from 'components/molecules/BlogPostCard'
+import BlogPostCard from 'components/modules/BlogPostCard'
 import type { BlogPost } from 'types/blogPost'
 
 type BlogPostListProps = {

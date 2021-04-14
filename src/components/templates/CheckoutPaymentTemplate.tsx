@@ -8,10 +8,10 @@ import { SubmitHandler, useForm } from 'react-hook-form'
 import LayoutCheckout from 'components/layouts/LayoutCheckout/LayoutCheckout'
 import type { PaymentMethods } from 'types/paymentMethods'
 import type { Config } from 'types/config'
-import FormInputRadio from 'components/atoms/FormInputRadio'
-import Form from 'components/atoms/Form'
-import BoxHeader from 'components/atoms/BoxHeader'
-import OrderSummary from 'components/molecules/OrderSummary'
+import FormInputRadio from 'components/elements/FormInputRadio'
+import Form from 'components/elements/Form'
+import BoxHeader from 'components/elements/BoxHeader'
+import OrderSummary from 'components/modules/OrderSummary'
 
 type CheckoutPaymentTemplateProps = {
   config: Config

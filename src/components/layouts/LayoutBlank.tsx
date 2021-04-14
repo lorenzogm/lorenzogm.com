@@ -2,7 +2,7 @@ import { ReactElement, ReactNode } from 'react'
 import Container from '@material-ui/core/Container'
 
 import Meta from 'components/layouts/Meta'
-import CookieBanner from 'components/molecules/CookieBanner'
+import CookieBanner from 'components/modules/CookieBanner'
 
 type LayoutBlankProps = {
   children: ReactNode

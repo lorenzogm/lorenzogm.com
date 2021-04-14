@@ -4,7 +4,7 @@ import Button from '@material-ui/core/Button'
 import IconArrowBack from '@material-ui/icons/ArrowBack'
 import styled from 'styled-components'
 import Container from '@material-ui/core/Container'
-import Link from 'components/atoms/Link'
+import Link from 'components/elements/Link'
 import theme from 'theme'
 
 const FooterWrapper = styled.footer`

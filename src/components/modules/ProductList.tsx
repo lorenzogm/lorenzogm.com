@@ -1,7 +1,7 @@
 import Grid from '@material-ui/core/Grid'
 import { ReactElement } from 'react'
 import type { Product } from 'types/product'
-import ProductTile from 'components/molecules/ProductTile'
+import ProductTile from 'components/modules/ProductTile'
 import type { Config } from 'types/config'
 
 type ProductListProps = {

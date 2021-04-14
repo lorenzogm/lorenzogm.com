@@ -8,8 +8,8 @@ import StepLabel from '@material-ui/core/StepLabel'
 import styled from 'styled-components'
 import type { Config } from 'types/config'
 import theme from 'theme'
-import Logo from 'components/molecules/Logo'
-import Link from 'components/atoms/Link'
+import Logo from 'components/modules/Logo'
+import Link from 'components/elements/Link'
 
 const HeaderWrapper = styled.header`
   background-color: ${theme.palette.grey[500]};

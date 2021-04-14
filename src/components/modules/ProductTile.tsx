@@ -7,8 +7,8 @@ import Grid from '@material-ui/core/Grid'
 import type { Category } from 'types/category'
 import type { Product } from 'types/product'
 import { Config } from 'types/config'
-import Image from 'components/atoms/Image'
-import Link from 'components/atoms/Link'
+import Image from 'components/elements/Image'
+import Link from 'components/elements/Link'
 import theme from 'theme'
 
 const PaperStyled = styled(Paper)`

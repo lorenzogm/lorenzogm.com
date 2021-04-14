@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import Button from '@material-ui/core/Button'
 
-import Image from 'components/atoms/Image'
+import Image from 'components/elements/Image'
 import type { Config } from 'types/config'
 
 type PaymentMethodsProps = {

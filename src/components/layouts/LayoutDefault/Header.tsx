@@ -6,11 +6,11 @@ import IconButton from '@material-ui/core/IconButton'
 import LocalMallIcon from '@material-ui/icons/LocalMall'
 import { useShoppingCart } from 'use-shopping-cart'
 import type { Config } from 'types/config'
-import NavigationMobile from 'components/molecules/NavigationMobile'
-import LocaleSwitcher from 'components/molecules/LocaleSwitcher'
-import Navigation from 'components/molecules/Navigation'
-import Logo from 'components/molecules/Logo'
-import Link from 'components/atoms/Link'
+import NavigationMobile from 'components/modules/NavigationMobile'
+import LocaleSwitcher from 'components/modules/LocaleSwitcher'
+import Navigation from 'components/modules/Navigation'
+import Logo from 'components/modules/Logo'
+import Link from 'components/elements/Link'
 
 const { CONFIG_STORE } = process.env
 

@@ -7,7 +7,7 @@ import PageLayout from 'components/layouts/LayoutDefault/LayoutDefault'
 import type { Config } from 'types/config'
 import type { Category } from 'types/category'
 import type { Product } from 'types/product'
-import ProductList from 'components/molecules/ProductList'
+import ProductList from 'components/modules/ProductList'
 
 type CategoryTemplateProps = {
   preview: boolean

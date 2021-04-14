@@ -4,9 +4,9 @@ import ErrorPage from 'next/error'
 import 'normalize.css/normalize.css'
 
 import { useGtagHandlerouteChange } from 'services/gtag'
-import ProviderStripe from './ProviderStripe'
-import ProviderStyledComponents from './ProviderStyledComponents'
-import ProviderReactQuery from './ProviderReactQuery'
+import StripeProvider from 'providers/StripeProvider'
+import StyledComponentsProvider from 'providers/StyledComponentsProvider'
+import ReactQueryProvider from 'providers/ReactQueryProvider'
 
 export default function App({
   Component,
@@ -34,16 +34,16 @@ export default function App({
   }
 
   return (
-    <ProviderReactQuery>
-      <ProviderStripe>
-        <ProviderStyledComponents>
+    <ReactQueryProvider>
+      <StripeProvider>
+        <StyledComponentsProvider>
           <Component
             // eslint-disable-next-line react/jsx-props-no-spreading
             {...pageProps}
           />
-        </ProviderStyledComponents>
-      </ProviderStripe>
-    </ProviderReactQuery>
+        </StyledComponentsProvider>
+      </StripeProvider>
+    </ReactQueryProvider>
   )
 }
 
@@ -74,18 +74,18 @@ function MaintenanceRedirect({ Component, pageProps, router }: AppProps) {
     pageProps.config.isMaintenanceEnabled === true
   ) {
     return (
-      <ProviderReactQuery>
-        <ProviderStripe>
-          <ProviderStyledComponents>
+      <ReactQueryProvider>
+        <StripeProvider>
+          <StyledComponentsProvider>
             <>
               <Component
                 // eslint-disable-next-line react/jsx-props-no-spreading
                 {...pageProps}
               />
             </>
-          </ProviderStyledComponents>
-        </ProviderStripe>
-      </ProviderReactQuery>
+          </StyledComponentsProvider>
+        </StripeProvider>
+      </ReactQueryProvider>
     )
   }
 

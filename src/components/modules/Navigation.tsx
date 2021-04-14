@@ -3,7 +3,7 @@ import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
 import styled from 'styled-components'
 import type { Config } from 'types/config'
-import Link from 'components/atoms/Link'
+import Link from 'components/elements/Link'
 import theme from 'theme'
 
 const Category = styled(Typography)`

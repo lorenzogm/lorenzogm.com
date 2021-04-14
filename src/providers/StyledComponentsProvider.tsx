@@ -1,3 +1,4 @@
+/* eslint-disable testing-library/no-node-access */
 import { StylesProvider, ThemeProvider } from '@material-ui/core/styles'
 import { ReactElement, useEffect } from 'react'
 

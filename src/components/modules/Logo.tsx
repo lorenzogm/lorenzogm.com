@@ -1,6 +1,6 @@
 import { Typography } from '@material-ui/core'
 import { ReactElement } from 'react'
-import Image from 'components/atoms/Image'
+import Image from 'components/elements/Image'
 import type { Config } from 'types/config'
 
 type LogoProps = { config: Config }

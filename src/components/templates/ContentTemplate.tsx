@@ -4,10 +4,10 @@ import Grid from '@material-ui/core/Grid'
 import PageLayout from 'components/layouts/LayoutDefault/LayoutDefault'
 import type { Config } from 'types/config'
 import { Content } from 'types/content'
-import Carousel from 'components/molecules/Carousel'
-import Image from 'components/atoms/Image'
+import Carousel from 'components/modules/Carousel'
+import Image from 'components/elements/Image'
 import { Slice } from 'types/slices'
-import ProductList from 'components/molecules/ProductList'
+import ProductList from 'components/modules/ProductList'
 
 type ContentTemplateProps = {
   preview: boolean

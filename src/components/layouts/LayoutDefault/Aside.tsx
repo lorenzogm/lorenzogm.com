@@ -11,7 +11,7 @@ import Box from '@material-ui/core/Box'
 import IconButton from '@material-ui/core/IconButton'
 import styled from 'styled-components'
 import Button from '@material-ui/core/Button'
-import CartProducts from 'components/molecules/CartProductList'
+import CartProducts from 'components/modules/CartProductList'
 import theme from 'theme'
 
 export type CartStatus = 'OPEN' | 'CLOSED'

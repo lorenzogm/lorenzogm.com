@@ -4,7 +4,7 @@ import Typography from '@material-ui/core/Typography'
 import { useShoppingCart } from 'use-shopping-cart'
 import PageLayout from 'components/layouts/LayoutDefault/LayoutDefault'
 import type { Config } from 'types/config'
-import Basket from 'components/molecules/CartProductList'
+import Basket from 'components/modules/CartProductList'
 
 type CartTemplateProps = {
   config: Config
