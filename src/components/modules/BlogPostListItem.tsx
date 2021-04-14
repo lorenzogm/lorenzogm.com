@@ -1,6 +1,7 @@
 import { ReactElement } from 'react'
 import { format } from 'date-fns-tz'
 import Typography from '@material-ui/core/Typography'
+import IconArrowForward from '@material-ui/icons/ArrowForward'
 import { Date, RichText } from 'prismic-reactjs'
 import Grid from '@material-ui/core/Grid'
 import Link from 'components/elements/Link'
@@ -21,8 +22,12 @@ export default function BlogPostListItem({
       <article>
         <Link href={`/blog/${blogPostEntry.uid}`}>
           <Typography variant="h4">{blogPostEntry.title}</Typography>
-          <Typography>{RichText.render(blogPostEntry.excerpt)}</Typography>
           <Typography>{dateFirstPublication}</Typography>
+          <Typography>{RichText.render(blogPostEntry.excerpt)}</Typography>
+          <Grid container alignItems="center">
+            <Typography variant="button">Read</Typography>
+            <IconArrowForward fontSize="small" />
+          </Grid>
         </Link>
       </article>
     </Grid>
