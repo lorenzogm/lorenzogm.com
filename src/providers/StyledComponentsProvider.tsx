@@ -1,8 +1,18 @@
 /* eslint-disable testing-library/no-node-access */
-import { StylesProvider, ThemeProvider } from '@material-ui/core/styles'
+import { ThemeProvider as StyledComponentsThemeProvider } from 'styled-components'
+import {
+  StylesProvider,
+  createMuiTheme,
+  ThemeProvider as MuiThemeProvider,
+} from '@material-ui/core/styles'
 import { ReactElement, useEffect } from 'react'
 
-import theme from 'theme'
+const theme = createMuiTheme({
+  palette: {
+    primary: { main: '#252e43' },
+    secondary: { main: '#fafafa' },
+  },
+})
 
 type ProviderStyledComponentsProps = {
   children: ReactElement
@@ -19,7 +29,11 @@ export default function ProviderStyledComponents({
 
   return (
     <StylesProvider injectFirst>
-      <ThemeProvider theme={theme}>{children}</ThemeProvider>
+      <MuiThemeProvider theme={theme}>
+        <StyledComponentsThemeProvider theme={theme}>
+          {children}
+        </StyledComponentsThemeProvider>
+      </MuiThemeProvider>
     </StylesProvider>
   )
 }
