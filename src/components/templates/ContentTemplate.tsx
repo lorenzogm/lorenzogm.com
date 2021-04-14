@@ -8,6 +8,8 @@ import Carousel from 'components/modules/Carousel'
 import Image from 'components/elements/Image'
 import { Slice } from 'types/slices'
 import ProductList from 'components/modules/ProductList'
+import Teaser from 'components/slices/Teaser'
+import BlogPostLatest from 'components/slices/BlogPostLatest'
 
 type ContentTemplateProps = {
   preview: boolean
@@ -30,6 +32,14 @@ export default function ContentTemplate({
 
       {content.data.body.map((component: Slice, index) => {
         switch (component.sliceType) {
+          case 'blog_posts__latest':
+            return (
+              // eslint-disable-next-line react/no-array-index-key
+              <div key={`${component.sliceType}-${index}`}>
+                <BlogPostLatest blogPostEntries={component.items} />
+              </div>
+            )
+
           case 'carousel':
             return (
               // eslint-disable-next-line react/no-array-index-key
@@ -67,6 +77,18 @@ export default function ContentTemplate({
               </Grid>
             )
 
+          case 'teaser':
+            return (
+              // eslint-disable-next-line react/no-array-index-key
+              <div key={`${component.sliceType}-${index}`}>
+                <Teaser
+                  title={component.title}
+                  subtitle={component.subtitle}
+                  image={component.image}
+                />
+              </div>
+            )
+
           default:
             return null
         }
@@ -79,7 +101,11 @@ export default function ContentTemplate({
   }
 
   return (
-    <PageLayout preview={preview} config={config}>
+    <PageLayout
+      preview={preview}
+      config={config}
+      imageBackground={content.data.imageBackground}
+    >
       {render}
     </PageLayout>
   )

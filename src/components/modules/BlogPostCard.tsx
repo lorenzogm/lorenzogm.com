@@ -7,11 +7,10 @@ import Paper from '@material-ui/core/Paper'
 import Grid from '@material-ui/core/Grid'
 import Image from 'components/elements/Image'
 import Link from 'components/elements/Link'
-import theme from 'theme'
 import { BlogPost } from 'types/blogPost'
 
 const PaperStyled = styled(Paper)`
-  margin-bottom: ${theme.spacing(1)}px;
+  margin-bottom: ${({ theme }) => `${theme.spacing(1)}px`};
 `
 
 type BlogPostCardProps = {

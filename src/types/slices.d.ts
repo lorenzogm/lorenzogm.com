@@ -1,7 +1,18 @@
+import { BlogPost } from './blogPost'
 import { Image } from './image'
 import { Product } from './product'
 
-type Slice = SliceCarousel | SliceImage | SliceListOfProducts
+type Slice =
+  | SliceBlogPostLatest
+  | SliceCarousel
+  | SliceImage
+  | SliceListOfProducts
+  | SliceTeaser
+
+type SliceBlogPostLatest = {
+  sliceType: 'blog_posts__latest'
+  items: BlogPost[]
+}
 
 type SliceCarousel = {
   sliceType: 'carousel'
@@ -22,4 +33,11 @@ type SliceListOfProducts = {
   sliceType: 'list_of_products'
   title: string
   items: Product[]
+}
+
+type SliceTeaser = {
+  sliceType: 'teaser'
+  title: string
+  subtitle: string
+  image: Image
 }

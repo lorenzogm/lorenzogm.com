@@ -5,5 +5,6 @@ export type Content = {
   data: {
     title: string
     body: Slice[]
+    imageBackground: Image | null
   }
 }

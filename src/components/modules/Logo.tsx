@@ -14,7 +14,7 @@ export default function Logo({ config }: LogoProps): ReactElement {
       height={config.logo.dimensions.height}
     />
   ) : (
-    <Typography variant="h3" component="p">
+    <Typography variant="h5" component="p">
       {config.siteName}
     </Typography>
   )

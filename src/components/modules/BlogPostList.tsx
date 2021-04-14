@@ -1,6 +1,6 @@
 import Grid from '@material-ui/core/Grid'
 import type { ReactElement } from 'react'
-import BlogPostCard from 'components/modules/BlogPostCard'
+import BlogPostListItem from 'components/modules/BlogPostListItem'
 import type { BlogPost } from 'types/blogPost'
 
 type BlogPostListProps = {
@@ -13,7 +13,10 @@ export default function BlogPostList({
   return (
     <Grid container spacing={4}>
       {blogPostEntries.map((blogPostEntry) => (
-        <BlogPostCard key={blogPostEntry.uid} blogPostEntry={blogPostEntry} />
+        <BlogPostListItem
+          key={blogPostEntry.uid}
+          blogPostEntry={blogPostEntry}
+        />
       ))}
     </Grid>
   )
